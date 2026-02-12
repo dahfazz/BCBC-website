@@ -1,0 +1,83 @@
+<div class="hero-section">
+  <div class="container-fluid h-100">
+    <div class="row h-100">
+      <div class="col-lg-6 hero-left">
+        <div class="hero-image-container">
+          <div class="hero-overlay"></div>
+          <!-- <img src="../../../assets/images/team1.jpg" class="hero-image" /> -->
+        </div>
+      </div>
+      <div class="col-lg-6 hero-right">
+        <div class="hero-content">
+          <h1 class="team-name alt-font">BOISCO BASKET !</h1>
+          <p class="team-tagline">Le club de basket de Bois-Colombes</p>
+
+          <div class="team-stats">
+            <div class="stat-item">
+              <h3 class="alt-font">{{getBilan()}}</h3>
+              <p>Bilan Saison</p>
+            </div>
+            <div class="stat-item">
+              <h3 class="alt-font">{{getAverage()}}</h3>
+              <p>Moyenne Pts POUR</p>
+            </div>
+            <div class="stat-item">
+              <h3 class="alt-font">{{getAverage(false)}}</h3>
+              <p>Moyenne Pts CONTRE</p>
+            </div>
+          </div>
+
+          <div class="cta-buttons">
+            <a routerLink="/schedule" class="btn btn-primary btn-lg">Voir le Calendrier</a>
+            <a routerLink="/players" class="btn btn-outline-primary btn-lg">Découvrir l'Équipe</a>
+          </div>
+
+          <div class="next-game">
+            @let nextGame = getNextGame();
+
+            <h4>Prochain Match</h4>
+            <div class="game-info">
+              <p class="game-date">{{nextGame?.date}}</p>
+              <p class="game-opponent">vs {{nextGame?.opponent}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="highlights-section">
+  <div class="container">
+    <h2 class="section-title">Pourquoi Choisir BCBC</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="highlight-card">
+          <div class="highlight-icon">
+            <i class="bi bi-trophy-fill"></i>
+          </div>
+          <h3>Palmarès Prestigieux</h3>
+          <p>De nombreux titres de champion et une tradition gagnante depuis plus d'une décennie.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="highlight-card">
+          <div class="highlight-icon">
+            <i class="bi bi-people-fill"></i>
+          </div>
+          <h3>Encadrement d'Élite</h3>
+          <p>Un staff expérimenté dédié au développement des compétences et du caractère.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="highlight-card">
+          <div class="highlight-icon">
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <h3>Engagement Communautaire</h3>
+          <p>Un fort soutien de la communauté et un engagement à redonner à travers le basketball.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

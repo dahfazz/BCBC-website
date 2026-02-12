@@ -1,0 +1,6 @@
+@import '../variables';
+
+.main-content {
+  padding-top: $header-height;
+  min-height: calc(100vh - #{$header-height});
+}

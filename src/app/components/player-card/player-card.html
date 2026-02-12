@@ -1,0 +1,14 @@
+<div class="player-card">
+  <div class="card">
+    <div class="player-image-container">
+      <img [src]="`assets/images/players/${player.photo}`" [alt]="player.name" class="player-image">
+      <div class="player-number">{{ player.jerseyNumber }}</div>
+    </div>
+    <div class="card-body">
+      <h5 class="player-name">{{ player.name }}</h5>
+      <p class="player-position">{{ player.position }}</p>
+      <p class="player-height">{{ player.height }}</p>
+      <p class="player-bio">{{ player.bio }}</p>
+    </div>
+  </div>
+</div>

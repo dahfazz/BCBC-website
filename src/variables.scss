@@ -1,0 +1,250 @@
+// ============================================
+// BCBC Website - SCSS Variables
+// ============================================
+// This file contains only custom variables specific to the BCBC website.
+// Bootstrap's variables are imported and reused where possible.
+
+// Import Bootstrap variables first
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+
+// ============================================
+// Custom Colors (Team Branding)
+// ============================================
+
+// Primary team color (Royal Blue)
+$primary-color: #0504AA;
+$primary-color-light: rgb(5 4 170 / 80%);
+$primary-color-lighter: rgb(5 4 170 / 50%);
+$primary-color-lightest: rgb(5 4 170 / 30%);
+$primary-color-gradient-start: rgb(65 105 225 / 70%);
+
+// Team colors
+$secondary-color: $white;
+$accent-color: $white;
+
+// Text colors (using Bootstrap where possible)
+$text-color: #333;
+$text-gray: #666;
+$text-white: $white;
+
+// Background colors (using Bootstrap)
+$bg-light: $gray-100; // Same as Bootstrap's #f8f9fa
+$bg-dark: #1a1a2e;
+$bg-dark-alt: #16213e;
+$bg-white: $white;
+
+// Status colors (use Bootstrap's built-in colors)
+$color-success: $green; // Bootstrap's #198754 vs our #28a745
+$color-success-bg: rgba($green, 0.1);
+$color-danger: $red; // Bootstrap's #dc3545 (same as ours!)
+$color-danger-bg: rgba($red, 0.1);
+$color-warning: $yellow; // Bootstrap's #ffc107 (same as ours!)
+$color-warning-bg: rgba($yellow, 0.1);
+
+// Additional transparent color utilities (commonly used in project)
+$white-transparent-05: rgba($white, 0.05);
+$white-transparent-08: rgba($white, 0.08);
+$white-transparent-10: rgba($white, 0.1);
+$white-transparent-20: rgba($white, 0.2);
+$white-transparent-30: rgba($white, 0.3);
+$white-transparent-70: rgba($white, 0.7);
+$white-transparent-80: rgba($white, 0.8);
+$white-transparent-85: rgba($white, 0.85);
+$white-transparent-90: rgba($white, 0.9);
+$white-transparent-95: rgba($white, 0.95);
+$black-transparent-05: rgba($black, 0.05);
+$black-transparent-10: rgba($black, 0.1);
+$black-transparent-15: rgba($black, 0.15);
+$black-transparent-20: rgba($black, 0.2);
+$black-transparent-30: rgba($black, 0.3);
+
+// Border color
+$border-light: #eee;
+
+// ============================================
+// Spacing (Extended Bootstrap Spacer Scale)
+// ============================================
+// Bootstrap provides: 0, 0.25rem, 0.5rem, 1rem, 1.5rem, 3rem
+// We add more granular options for our design
+
+$spacing-xs: 0.3rem;   // Custom
+$spacing-sm: 0.5rem;   // = Bootstrap spacer-2
+$spacing-md: 1rem;     // = Bootstrap spacer-3
+$spacing-lg: 1.5rem;   // = Bootstrap spacer-4
+$spacing-xl: 2rem;     // Custom
+$spacing-2xl: 3rem;    // = Bootstrap spacer-5
+$spacing-3xl: 4rem;    // Custom
+$spacing-4xl: 5rem;    // Custom
+
+// Specific spacing values for components
+$padding-card: 1.5rem;
+$padding-section: 3rem;
+$margin-section: 4rem;
+
+// ============================================
+// Typography
+// ============================================
+
+// Font families (custom brand font)
+$font-primary: 'Peugeot New', -apple-system, blinkmacsystemfont, sans-serif;
+$font-system: -apple-system, blinkmacsystemfont, sans-serif;
+
+// Font sizes (more granular than Bootstrap's default scale)
+$font-size-xs: 0.85rem;
+$font-size-sm: 0.9rem;
+$font-size-base: 0.95rem;
+$font-size-md: 1rem;
+$font-size-lg: 1.05rem;
+$font-size-xl: 1.1rem;
+$font-size-2xl: 1.2rem;
+$font-size-3xl: 1.25rem;
+$font-size-4xl: 1.3rem;
+$font-size-5xl: 1.5rem;
+$font-size-6xl: 2rem;
+$font-size-7xl: 2.5rem;
+$font-size-8xl: 3rem;
+$font-size-9xl: 5rem;
+
+// Font weights (aligned with common values)
+$font-weight-light: 300;
+$font-weight-normal: normal;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+
+// Line heights
+$line-height-tight: 1.3;
+$line-height-snug: 1.5;
+$line-height-base: 1.6;
+$line-height-relaxed: 1.8;
+
+// Letter spacing
+$letter-spacing-tight: -4px;
+$letter-spacing-normal: 0;
+$letter-spacing-wide: 0.5px;
+$letter-spacing-wider: 1px;
+$letter-spacing-widest: 2px;
+
+// ============================================
+// Transitions & Animations
+// ============================================
+// Bootstrap provides $transition-base: all .2s ease-in-out
+
+$transition-fast: 0.2s ease;      // Similar to Bootstrap's .2s
+$transition-base: 0.3s ease;      // Slightly slower than Bootstrap
+$transition-slow: 0.6s ease;
+$transition-speed: 0.3s; // For backward compatibility with var(--transition-speed)
+
+// ============================================
+// Border Radius
+// ============================================
+// Bootstrap provides: .375rem (default), .25rem (sm), .5rem (lg), 1rem (xl), 2rem (xxl), 50rem (pill)
+// We map to Bootstrap values where possible and add custom ones
+
+$border-radius-none: 0;
+$border-radius-sm: 2px;            // Custom (Bootstrap's is .25rem = 4px)
+$border-radius-md: $border-radius; // Use Bootstrap's default (.375rem)
+$border-radius-lg: 8px;            // Custom (Bootstrap's is .5rem)
+$border-radius-xl: 10px;           // Custom (Bootstrap's is 1rem = 16px)
+$border-radius-2xl: 12px;          // Custom (Bootstrap's is 2rem = 32px)
+$border-radius-3xl: 16px;          // Custom
+$border-radius-full: 50%;
+$border-radius-rounded: 20px;      // Custom pill-like but specific size
+
+// ============================================
+// Shadows
+// ============================================
+// Bootstrap provides: $box-shadow, $box-shadow-sm, $box-shadow-lg
+// We create custom shadows for our design
+
+$shadow-xs: 0 2px 4px rgba($black, 0.1);
+$shadow-sm: 0 2px 10px rgba($black, 0.05);
+$shadow-base: 0 4px 15px rgba($black, 0.08);
+$shadow-md: 0 4px 15px rgba($black, 0.1);
+$shadow-lg: 0 8px 20px rgba($black, 0.15);
+$shadow-xl: 0 8px 25px rgb(65 105 225 / 15%);
+$shadow-2xl: 0 10px 30px rgb(5 4 170 / 20%);
+$shadow-hover: 0 8px 25px rgb(65 105 225 / 20%);
+$shadow-card: 0 4px 10px rgba($black, 0.2);
+
+// ============================================
+// Custom Component Dimensions
+// ============================================
+
+// Heights
+$header-height: 80px;
+$hero-min-height: 400px;
+$section-min-height: 70vh;
+
+// Widths
+$content-max-width: 700px;
+$hero-content-max-width: 600px;
+
+// Icon sizes
+$icon-size-sm: 40px;
+$icon-size-md: 50px;
+$icon-size-lg: 80px;
+
+// Component-specific image heights
+$player-image-height: 300px;
+$player-image-height-mobile: 250px;
+$partner-logo-height: 120px;
+$timeline-image-height: 180px;
+$timeline-image-height-mobile: 200px;
+
+// ============================================
+// Breakpoints (Use Bootstrap's grid breakpoints)
+// ============================================
+// Bootstrap: xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px
+// We map our custom names to Bootstrap values
+
+@use 'sass:map';
+
+$breakpoint-xs: map.get($grid-breakpoints, 'sm');  // 576px
+$breakpoint-sm: map.get($grid-breakpoints, 'md');  // 768px
+$breakpoint-md: map.get($grid-breakpoints, 'lg');  // 992px
+$breakpoint-lg: map.get($grid-breakpoints, 'xl');  // 1200px
+$breakpoint-xl: map.get($grid-breakpoints, 'xl');  // 1200px
+
+// ============================================
+// Z-index Layers
+// ============================================
+
+$z-index-base: 1;
+$z-index-dropdown: 2;
+$z-index-fixed: 3;
+$z-index-modal: 100;
+
+// ============================================
+// Custom Gradients (Team Branding)
+// ============================================
+
+$gradient-primary: linear-gradient(135deg, $primary-color 0%, $primary-color-gradient-start 50%);
+$gradient-primary-accent: linear-gradient(135deg, $primary-color 0%, $accent-color 100%);
+$gradient-dark: linear-gradient(135deg, $bg-dark 0%, $bg-dark-alt 100%);
+$gradient-timeline: linear-gradient(90deg,
+  $primary-color-lightest 0%,
+  $primary-color-light 20%,
+  $primary-color-light 80%,
+  $primary-color-lightest 100%
+);
+$gradient-timeline-vertical: linear-gradient(180deg,
+  $primary-color-lightest 0%,
+  $primary-color-light 20%,
+  $primary-color-light 80%,
+  $primary-color-lightest 100%
+);
+
+// ============================================
+// Transform Utilities (Hover Effects)
+// ============================================
+
+$blur-amount: blur(10px);
+$hover-transform-up: translateY(-2px);
+$hover-transform-up-sm: translateY(-3px);
+$hover-transform-up-md: translateY(-5px);
+$hover-transform-up-lg: translateY(-10px);
+$hover-scale: scale(1.05);
+$hover-scale-lg: scale(1.1);

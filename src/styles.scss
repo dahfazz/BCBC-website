@@ -1,0 +1,119 @@
+/* Royal Blue Theme - Basketball Team Website */
+
+@import './variables';
+
+@font-face {
+  font-family: 'Peugeot New';
+  src: url('./Peugeot_New-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Peugeot New';
+  src: url('./Peugeot-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  --accent-color: #{$accent-color};
+  --text-color: #{$text-color};
+  --bg-light: #{$bg-light};
+  --transition-speed: #{$transition-speed};
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-system;
+  color: var(--text-color);
+  background: $gradient-primary, var(--primary-color) url('./assets/images/team1.jpg') no-repeat center center fixed;
+  line-height: $line-height-base;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-color);
+  font-weight: $font-weight-bold;
+  margin-bottom: $spacing-md;
+}
+
+.btn-primary {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  transition: all var(--transition-speed) ease;
+
+  &:hover {
+    background-color: var(--accent-color) !important;
+    border-color: var(--accent-color) !important;
+    transform: $hover-transform-up;
+    box-shadow: $shadow-md;
+  }
+}
+
+.btn-outline-primary {
+  color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+
+  &:hover {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+  }
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color var(--transition-speed) ease;
+
+  &:hover {
+    color: var(--accent-color);
+  }
+}
+
+.card {
+  border: none;
+  border-radius: $border-radius-none;
+  overflow: hidden;
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+
+  &:hover {
+    transform: $hover-transform-up-md;
+    box-shadow: $shadow-lg;
+  }
+}
+
+.section-title {
+  text-align: center;
+  font-size: $font-size-7xl;
+  margin-bottom: $spacing-md;
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    width: $icon-size-lg;
+    height: 4px;
+    background-color: $white;
+    margin: $spacing-md auto 0;
+    border-radius: $border-radius-sm;
+  }
+}
+
+.alt-font {
+  font-family: $font-primary;
+}
+
+@media (max-width: $breakpoint-sm) {
+  .section-title {
+    font-size: $font-size-6xl;
+  }
+}

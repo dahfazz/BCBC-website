@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top border-bottom border-black">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/">
+      <span class="brand-text alt-font">Bois-Colombes Basket Club</span>
+    </a>
+    <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed"
+      [attr.aria-expanded]="!isMenuCollapsed" aria-controls="navbarNav" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" [class.show]="!isMenuCollapsed" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+            (click)="isMenuCollapsed = true">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/schedule" routerLinkActive="active"
+            (click)="isMenuCollapsed = true">Calendrier</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/players" routerLinkActive="active"
+            (click)="isMenuCollapsed = true">Joueurs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/partners" routerLinkActive="active"
+            (click)="isMenuCollapsed = true">Partenaires</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/historique" routerLinkActive="active"
+            (click)="isMenuCollapsed = true">Historique</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

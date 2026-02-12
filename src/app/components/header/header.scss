@@ -1,0 +1,88 @@
+@import '../../../variables';
+
+.navbar {
+  background: var(--primary-color) url('./eagle.jpg.png') no-repeat left / 90px;
+  box-shadow: $shadow-sm;
+  padding: $spacing-md 0;
+  transition: all $transition-base;
+
+  .navbar-brand {
+    font-size: 1.8rem;
+    font-weight: $font-weight-extrabold;
+    letter-spacing: $letter-spacing-widest;
+
+    .brand-text {
+      color: $text-white;
+      text-shadow: 2px 2px 4px $black-transparent-20;
+    }
+
+    &:hover .brand-text {
+      color: var(--bg-light);
+    }
+  }
+
+  .navbar-toggler {
+    border-color: $white-transparent-30;
+
+    &:focus {
+      box-shadow: 0 0 0 0.2rem $white-transparent-30;
+    }
+  }
+
+  .navbar-nav {
+    .nav-item {
+      margin-left: $spacing-lg;
+
+      @media (max-width: $breakpoint-md) {
+        margin-left: 0;
+        margin-top: $spacing-sm;
+      }
+    }
+
+    .nav-link {
+      color: $white-transparent-90;
+      font-weight: $font-weight-medium;
+      font-size: $font-size-lg;
+      padding: $spacing-sm $spacing-md;
+      border-radius: $border-radius-md;
+      transition: all $transition-base;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: $text-white;
+        transition: width $transition-base;
+      }
+
+      &:hover {
+        color: $text-white;
+        background-color: $white-transparent-10;
+
+        &::after {
+          width: 80%;
+        }
+      }
+
+      &.active {
+        color: var(--primary-color);
+        background-color: var(--accent-color);
+        font-weight: $font-weight-semibold;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .navbar-collapse {
+    margin-top: $spacing-md;
+    padding: $spacing-md;
+    background-color: $black-transparent-10;
+    border-radius: $border-radius-xl;
+  }
+}

@@ -1,0 +1,42 @@
+@import '../../variables';
+
+.historique-page {
+  padding-top: 100px;
+  padding-bottom: 60px;
+  min-height: 100vh;
+  background: $gradient-dark;
+
+  .page-header {
+    text-align: center;
+    margin-bottom: 60px;
+
+    .page-title {
+      font-size: $font-size-8xl;
+      font-weight: $font-weight-bold;
+      color: $white;
+      margin-bottom: $spacing-md;
+      text-shadow: 2px 2px 4px $black-transparent-30;
+    }
+
+    .page-subtitle {
+      font-size: $font-size-3xl;
+      color: $white-transparent-80;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .historique-page {
+    padding-top: $header-height;
+
+    .page-header {
+      .page-title {
+        font-size: $font-size-6xl;
+      }
+
+      .page-subtitle {
+        font-size: $font-size-md;
+      }
+    }
+  }
+}
