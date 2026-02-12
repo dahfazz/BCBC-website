@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nFix SCSS import paths and organize variables file\n\n- Update import paths in all page SCSS files from ../../variables to ../../../variables\n- Move @use ''sass:map'' to top of variables.scss before Bootstrap imports\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push:*)",
+      "Bash(git commit:*)"
+    ]
+  }
+}
