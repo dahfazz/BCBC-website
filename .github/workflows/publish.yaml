@@ -7,10 +7,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Install dependencies
-      run: npm i
-      
-    - name: Build
-      run: npm run build
-      
     - uses: bitovi/github-actions-angular-to-github-pages@v1.0.0
+      with:
+        checkout: true
+        install_command: npm i
