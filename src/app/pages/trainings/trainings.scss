@@ -1,0 +1,137 @@
+@import '../../../variables';
+
+.trainings-page {
+  padding-top: calc($header-height + $spacing-2xl);
+  min-height: calc(100vh - $header-height);
+  background-color: $bg-light;
+
+  .page-header {
+    text-align: center;
+    margin-bottom: $spacing-3xl;
+    padding: $spacing-2xl 0;
+
+    .page-title {
+      font-size: $font-size-8xl;
+      color: var(--primary-color);
+      margin-bottom: $spacing-md;
+      font-weight: $font-weight-bold;
+    }
+
+    .page-subtitle {
+      font-size: $font-size-xl;
+      color: $text-gray;
+    }
+  }
+
+  .trainings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: $spacing-xl;
+    margin-bottom: $spacing-3xl;
+
+    .training-card {
+      background: $bg-white;
+      border-radius: $border-radius-xl;
+      overflow: hidden;
+      box-shadow: $shadow-md;
+      transition: all $transition-base;
+
+      &:hover {
+        transform: $hover-transform-up-md;
+        box-shadow: $shadow-lg;
+      }
+
+      .card-header {
+        padding: $spacing-lg;
+        color: $text-white;
+
+        .team-name {
+          font-size: $font-size-3xl;
+          font-weight: $font-weight-bold;
+          margin: 0;
+          text-align: center;
+        }
+      }
+
+      .card-body {
+        padding: $spacing-xl;
+
+        .info-row {
+          display: flex;
+          align-items: center;
+          gap: $spacing-md;
+          margin-bottom: $spacing-lg;
+          font-size: $font-size-lg;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          i {
+            color: var(--primary-color);
+            font-size: $font-size-2xl;
+            width: 30px;
+          }
+
+          .info-label {
+            font-weight: $font-weight-semibold;
+            color: $text-gray;
+          }
+
+          .info-value {
+            color: var(--text-color);
+            font-weight: $font-weight-medium;
+          }
+        }
+      }
+    }
+  }
+
+  .info-section {
+    margin-bottom: $spacing-3xl;
+
+    .alert {
+      display: flex;
+      gap: $spacing-lg;
+      padding: $spacing-xl;
+      border-radius: $border-radius-lg;
+      background-color: #e0f2fe;
+      border: 1px solid #0284c7;
+
+      i {
+        font-size: $font-size-4xl;
+        color: #0284c7;
+      }
+
+      h4 {
+        color: #075985;
+        margin-bottom: $spacing-md;
+        font-weight: $font-weight-bold;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: $spacing-lg;
+        color: #0c4a6e;
+
+        li {
+          margin-bottom: $spacing-xs;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .trainings-page {
+    .trainings-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .page-header {
+      .page-title {
+        font-size: $font-size-6xl;
+      }
+    }
+  }
+}

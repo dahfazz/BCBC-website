@@ -1,0 +1,278 @@
+@import '../../../variables';
+
+.facilities-page {
+  padding-top: calc($header-height + $spacing-2xl);
+  min-height: calc(100vh - $header-height);
+  background-color: $bg-light;
+  padding-bottom: $spacing-4xl;
+
+  .page-header {
+    text-align: center;
+    margin-bottom: $spacing-3xl;
+    padding: $spacing-2xl 0;
+
+    .page-title {
+      font-size: $font-size-8xl;
+      color: var(--primary-color);
+      margin-bottom: $spacing-md;
+      font-weight: $font-weight-bold;
+    }
+
+    .page-subtitle {
+      font-size: $font-size-xl;
+      color: $text-gray;
+    }
+  }
+
+  .facilities-container {
+    .facility-card {
+      background: $bg-white;
+      border-radius: $border-radius-xl;
+      box-shadow: $shadow-lg;
+      margin-bottom: $spacing-3xl;
+      overflow: hidden;
+
+      .facility-header {
+        background: linear-gradient(135deg, var(--primary-color), #1e40af);
+        padding: $spacing-2xl;
+        display: flex;
+        align-items: center;
+        gap: $spacing-xl;
+        color: $text-white;
+
+        .facility-icon {
+          width: $icon-size-md;
+          height: $icon-size-md;
+          background-color: rgb(255 255 255 / 20%);
+          border-radius: $border-radius-lg;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+
+          i {
+            font-size: $font-size-7xl;
+          }
+        }
+
+        .facility-title-block {
+          .facility-name {
+            font-size: $font-size-6xl;
+            margin-bottom: $spacing-sm;
+            font-weight: $font-weight-bold;
+          }
+
+          .facility-address {
+            display: flex;
+            align-items: center;
+            gap: $spacing-sm;
+            font-size: $font-size-lg;
+            margin: 0;
+            opacity: 0.9;
+
+            i {
+              font-size: $font-size-xl;
+            }
+          }
+        }
+      }
+
+      .facility-content {
+        padding: $spacing-2xl;
+
+        .facility-description {
+          margin-bottom: $spacing-2xl;
+          padding-bottom: $spacing-2xl;
+          border-bottom: 2px solid $bg-light;
+
+          p {
+            font-size: $font-size-xl;
+            line-height: $line-height-relaxed;
+            color: var(--text-color);
+            margin: 0;
+          }
+        }
+
+        .facility-details {
+          .detail-section {
+            margin-bottom: $spacing-2xl;
+
+            .detail-title {
+              display: flex;
+              align-items: center;
+              gap: $spacing-md;
+              font-size: $font-size-3xl;
+              color: var(--primary-color);
+              margin-bottom: $spacing-lg;
+              font-weight: $font-weight-bold;
+
+              i {
+                font-size: $font-size-4xl;
+              }
+            }
+
+            .features-list {
+              list-style: none;
+              padding: 0;
+              display: grid;
+              grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+              gap: $spacing-md;
+
+              li {
+                display: flex;
+                align-items: center;
+                gap: $spacing-sm;
+                padding: $spacing-md;
+                background-color: $bg-light;
+                border-radius: $border-radius-md;
+                font-size: $font-size-lg;
+
+                i {
+                  color: #10b981;
+                  font-size: $font-size-xl;
+                  flex-shrink: 0;
+                }
+              }
+            }
+          }
+
+          .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: $spacing-lg;
+
+            .info-box {
+              display: flex;
+              align-items: center;
+              gap: $spacing-md;
+              padding: $spacing-lg;
+              background-color: $bg-light;
+              border-radius: $border-radius-lg;
+              border-left: 4px solid var(--primary-color);
+
+              .info-icon {
+                width: $icon-size-sm;
+                height: $icon-size-sm;
+                background: linear-gradient(135deg, var(--primary-color), #1e40af);
+                border-radius: $border-radius-lg;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $text-white;
+                flex-shrink: 0;
+
+                i {
+                  font-size: $font-size-4xl;
+                }
+              }
+
+              .info-content {
+                .info-label {
+                  font-size: $font-size-sm;
+                  color: $text-gray;
+                  font-weight: $font-weight-semibold;
+                  text-transform: uppercase;
+                  letter-spacing: $letter-spacing-wider;
+                  margin-bottom: $spacing-xs;
+                }
+
+                .info-value {
+                  font-size: $font-size-lg;
+                  color: var(--text-color);
+                  font-weight: $font-weight-bold;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .cta-section {
+    margin-top: $spacing-4xl;
+
+    .cta-card {
+      background: linear-gradient(135deg, var(--primary-color), #1e40af);
+      padding: $spacing-3xl;
+      border-radius: $border-radius-xl;
+      box-shadow: $shadow-xl;
+      text-align: center;
+      color: $text-white;
+
+      .cta-title {
+        font-size: $font-size-6xl;
+        margin-bottom: $spacing-lg;
+        font-weight: $font-weight-bold;
+      }
+
+      .cta-text {
+        font-size: $font-size-xl;
+        margin-bottom: $spacing-xl;
+        line-height: $line-height-relaxed;
+      }
+
+      .cta-note {
+        display: inline-flex;
+        align-items: center;
+        gap: $spacing-md;
+        padding: $spacing-lg $spacing-xl;
+        background-color: rgb(255 255 255 / 20%);
+        border-radius: $border-radius-lg;
+        backdrop-filter: blur(10px);
+        font-size: $font-size-lg;
+
+        i {
+          font-size: $font-size-3xl;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .facilities-page {
+    .page-header {
+      .page-title {
+        font-size: $font-size-6xl;
+      }
+    }
+
+    .facilities-container {
+      .facility-card {
+        .facility-header {
+          flex-direction: column;
+          text-align: center;
+
+          .facility-title-block {
+            .facility-address {
+              justify-content: center;
+            }
+          }
+        }
+
+        .facility-content {
+          .facility-details {
+            .detail-section {
+              .features-list {
+                grid-template-columns: 1fr;
+              }
+            }
+
+            .info-grid {
+              grid-template-columns: 1fr;
+            }
+          }
+        }
+      }
+    }
+
+    .cta-section {
+      .cta-card {
+        .cta-title {
+          font-size: $font-size-5xl;
+        }
+      }
+    }
+  }
+}

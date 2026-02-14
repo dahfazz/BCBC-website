@@ -1,0 +1,134 @@
+<div class="team-detail-page">
+  @if (team) {
+    <div class="container">
+      <div class="back-button">
+        <a routerLink="/teams" class="btn-back">
+          <i class="bi bi-arrow-left"></i>
+          <span>Retour aux équipes</span>
+        </a>
+      </div>
+
+      <div class="team-header">
+        <div class="team-icon-large">
+          <i class="bi bi-people-fill"></i>
+        </div>
+        <h1 class="team-name alt-font">{{ team.name }}</h1>
+        <div class="team-badges">
+          <span class="badge-large">{{ team.category }}</span>
+          <span class="badge-large">{{ team.ageGroup }}</span>
+          <span class="badge-large">{{ team.gender }}</span>
+        </div>
+      </div>
+
+      <div class="team-content">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="info-card">
+              <h2 class="section-title">
+                <i class="bi bi-info-circle-fill"></i>
+                Présentation
+              </h2>
+              <p class="team-description">{{ team.description }}</p>
+            </div>
+
+            <div class="info-card">
+              <h2 class="section-title">
+                <i class="bi bi-trophy-fill"></i>
+                Objectifs de la saison
+              </h2>
+              <ul class="objectives-list">
+                @for (objective of team.objectives; track objective) {
+                  <li>{{ objective }}</li>
+                }
+              </ul>
+            </div>
+
+            @if (team.achievements && team.achievements.length > 0) {
+              <div class="info-card">
+                <h2 class="section-title">
+                  <i class="bi bi-award-fill"></i>
+                  Palmarès
+                </h2>
+                <ul class="achievements-list">
+                  @for (achievement of team.achievements; track achievement) {
+                    <li>{{ achievement }}</li>
+                  }
+                </ul>
+              </div>
+            }
+          </div>
+
+          <div class="col-lg-4">
+            <div class="sidebar-card">
+              <h3 class="sidebar-title">
+                <i class="bi bi-calendar-event"></i>
+                Informations pratiques
+              </h3>
+
+              @if (team.coach) {
+                <div class="info-item">
+                  <div class="info-label">
+                    <i class="bi bi-person-badge"></i>
+                    Entraîneur
+                  </div>
+                  <div class="info-value">{{ team.coach }}</div>
+                </div>
+              }
+
+              @if (team.assistantCoach) {
+                <div class="info-item">
+                  <div class="info-label">
+                    <i class="bi bi-person"></i>
+                    Entraîneur adjoint
+                  </div>
+                  <div class="info-value">{{ team.assistantCoach }}</div>
+                </div>
+              }
+
+              <div class="info-item">
+                <div class="info-label">
+                  <i class="bi bi-calendar3"></i>
+                  Jour d'entraînement
+                </div>
+                <div class="info-value">{{ team.trainingDay }}</div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-label">
+                  <i class="bi bi-clock"></i>
+                  Horaire
+                </div>
+                <div class="info-value">{{ team.trainingTime }}</div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-label">
+                  <i class="bi bi-geo-alt-fill"></i>
+                  Lieu
+                </div>
+                <div class="info-value">{{ team.location }}</div>
+              </div>
+            </div>
+
+            <div class="cta-card">
+              <h3 class="cta-title">Intéressé(e) ?</h3>
+              <p class="cta-text">Rejoignez notre équipe {{ team.name }} !</p>
+              <a routerLink="/join-us" class="btn btn-primary btn-block">
+                Nous rejoindre
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  } @else {
+    <div class="container">
+      <div class="alert alert-warning">
+        <i class="bi bi-exclamation-triangle-fill"></i>
+        <p>Équipe non trouvée</p>
+        <a routerLink="/teams" class="btn btn-primary">Retour aux équipes</a>
+      </div>
+    </div>
+  }
+</div>

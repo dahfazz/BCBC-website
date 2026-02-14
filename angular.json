@@ -45,7 +45,6 @@
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "baseHref": "https://dahfazz.github.io/BCBC-website/",
             "deployUrl": "https://dahfazz.github.io/BCBC-website/",
             "assets": [
               "src/assets",

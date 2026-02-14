@@ -1,0 +1,116 @@
+<div class="join-us-page">
+  <div class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title alt-font">Rejoignez le BCBC !</h1>
+      <p class="hero-subtitle">Devenez membre de notre famille basketteuse</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="intro-section">
+      <h2 class="section-title alt-font">Pourquoi nous rejoindre ?</h2>
+      <p class="intro-text">
+        Que vous soyez débutant ou joueur expérimenté, jeune ou moins jeune, le Bois-Colombes Basket Club
+        vous accueille avec plaisir. Nous proposons des équipes pour tous les âges et tous les niveaux,
+        dans une ambiance conviviale et compétitive.
+      </p>
+    </div>
+
+    <div class="advantages-section">
+      <div class="advantages-grid">
+        @for (advantage of advantages; track advantage.title) {
+          <div class="advantage-card">
+            <div class="advantage-icon">
+              <i [class]="'bi ' + advantage.icon"></i>
+            </div>
+            <h3 class="advantage-title">{{ advantage.title }}</h3>
+            <p class="advantage-description">{{ advantage.description }}</p>
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="teams-cta-section">
+      <div class="cta-box">
+        <h3 class="cta-title">
+          <i class="bi bi-people-fill"></i>
+          Découvrez nos équipes
+        </h3>
+        <p class="cta-text">Explorez toutes nos équipes pour trouver celle qui vous correspond.</p>
+        <a routerLink="/teams" class="btn btn-primary btn-lg">
+          Voir les équipes
+          <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+      <div class="cta-box">
+        <h3 class="cta-title">
+          <i class="bi bi-calendar3"></i>
+          Consultez les horaires
+        </h3>
+        <p class="cta-text">Retrouvez le planning des entraînements de toutes nos équipes.</p>
+        <a routerLink="/trainings" class="btn btn-primary btn-lg">
+          Planning des entraînements
+          <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="steps-section">
+      <h2 class="section-title alt-font">Comment nous rejoindre ?</h2>
+      <div class="steps-timeline">
+        @for (step of steps; track step.number) {
+          <div class="step-card">
+            <div class="step-number">{{ step.number }}</div>
+            <div class="step-content">
+              <h3 class="step-title">{{ step.title }}</h3>
+              <p class="step-description">{{ step.description }}</p>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="contact-section">
+      <h2 class="section-title alt-font">Contactez-nous</h2>
+      <p class="contact-intro">N'hésitez pas à nous contacter pour toute question ou pour organiser une séance d'essai gratuite !</p>
+
+      <div class="contact-methods">
+        @for (method of contactMethods; track method.title) {
+          @if (method.link) {
+            <a [href]="method.link" class="contact-card" target="_blank" rel="noopener noreferrer">
+              <div class="contact-icon">
+                <i [class]="'bi ' + method.icon"></i>
+              </div>
+              <div class="contact-info">
+                <div class="contact-label">{{ method.title }}</div>
+                <div class="contact-value">{{ method.value }}</div>
+              </div>
+              <div class="contact-arrow">
+                <i class="bi bi-arrow-right"></i>
+              </div>
+            </a>
+          } @else {
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i [class]="'bi ' + method.icon"></i>
+              </div>
+              <div class="contact-info">
+                <div class="contact-label">{{ method.title }}</div>
+                <div class="contact-value">{{ method.value }}</div>
+              </div>
+            </div>
+          }
+        }
+      </div>
+    </div>
+
+    <div class="final-cta">
+      <div class="final-cta-card">
+        <i class="bi bi-basketball-fill"></i>
+        <h3>Prêt à rejoindre l'aventure ?</h3>
+        <p>Le BCBC vous attend ! Prenez contact avec nous dès aujourd'hui.</p>
+      </div>
+    </div>
+  </div>
+</div>

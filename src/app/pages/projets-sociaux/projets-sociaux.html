@@ -1,0 +1,37 @@
+<div class="projets-sociaux-page">
+  <div class="container">
+    <h1 class="section-title">Nos Projets Sociaux</h1>
+    <p class="page-description">
+      Au-delà du terrain, le BCBC s'engage dans des actions sociales pour renforcer les liens
+      dans notre communauté. Découvrez nos initiatives solidaires.
+    </p>
+
+    <div class="projets-list">
+      @for (projet of projets; track projet.id) {
+        <div class="projet-card">
+          <div class="projet-icon">
+            <i class="bi" [ngClass]="projet.icon"></i>
+          </div>
+          <div class="projet-content">
+            <h2>{{ projet.title }}</h2>
+            <p class="projet-description">{{ projet.description }}</p>
+            <ul class="projet-details">
+              @for (detail of projet.details; track detail) {
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  {{ detail }}
+                </li>
+              }
+            </ul>
+          </div>
+        </div>
+      }
+    </div>
+
+    <div class="cta-section">
+      <h2>Participer à nos actions</h2>
+      <p>Vous souhaitez vous impliquer dans nos projets sociaux ou en savoir plus ? Contactez-nous !</p>
+      <a href="mailto:contact@bcbc.com" class="btn btn-primary btn-lg">Nous Contacter</a>
+    </div>
+  </div>
+</div>

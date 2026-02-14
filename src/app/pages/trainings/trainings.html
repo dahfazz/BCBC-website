@@ -1,0 +1,49 @@
+<div class="trainings-page">
+  <div class="container">
+    <div class="page-header">
+      <h1 class="page-title alt-font">Planning des Entraînements</h1>
+      <p class="page-subtitle">Retrouvez les horaires d'entraînement de toutes nos équipes</p>
+    </div>
+
+    <div class="trainings-grid">
+      @for (session of trainingSessions; track session.team) {
+        <div class="training-card">
+          <div class="card-header" [style.background-color]="getDayColor(session.day)">
+            <h3 class="team-name">{{ session.team }}</h3>
+          </div>
+          <div class="card-body">
+            <div class="info-row">
+              <i class="bi bi-calendar3"></i>
+              <span class="info-label">Jour :</span>
+              <span class="info-value">{{ session.day }}</span>
+            </div>
+            <div class="info-row">
+              <i class="bi bi-clock"></i>
+              <span class="info-label">Horaire :</span>
+              <span class="info-value">{{ session.time }}</span>
+            </div>
+            <div class="info-row">
+              <i class="bi bi-geo-alt-fill"></i>
+              <span class="info-label">Lieu :</span>
+              <span class="info-value">{{ session.location }}</span>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+
+    <div class="info-section">
+      <div class="alert alert-info">
+        <i class="bi bi-info-circle-fill"></i>
+        <div>
+          <h4>Informations importantes</h4>
+          <ul>
+            <li>Merci d'arriver 10 minutes avant le début de l'entraînement</li>
+            <li>Les horaires peuvent être modifiés en cas d'événements exceptionnels</li>
+            <li>En cas de doute, contactez votre entraîneur</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
