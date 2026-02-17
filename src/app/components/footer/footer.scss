@@ -1,21 +1,21 @@
-@import '../../../variables';
+@use '../../../variables';
 
 .footer {
   background-color: var(--primary-color);
-  color: $text-white;
-  padding: $spacing-2xl 0 $spacing-lg;
-  margin-top: $margin-section;
+  color: variables.$text-white;
+  padding: variables.$spacing-2xl 0 variables.$spacing-lg;
+  margin-top: variables.$margin-section;
 
   h5 {
-    color: $text-white;
-    font-weight: $font-weight-bold;
-    margin-bottom: $spacing-lg;
-    font-size: $font-size-2xl;
+    color: variables.$text-white;
+    font-weight: variables.$font-weight-bold;
+    margin-bottom: variables.$spacing-lg;
+    font-size: variables.$font-size-2xl;
   }
 
   .footer-text {
-    color: $white-transparent-85;
-    line-height: $line-height-relaxed;
+    color: variables.$white-transparent-85;
+    line-height: variables.$line-height-relaxed;
     margin: 0;
   }
 
@@ -28,14 +28,12 @@
       margin-bottom: 0.75rem;
 
       a {
-        color: $white-transparent-85;
+        color: variables.$white-transparent-85;
         text-decoration: none;
-        transition: all $transition-base;
         display: inline-block;
 
         &:hover {
-          color: $text-white;
-          transform: translateX(5px);
+          color: variables.$text-white;
         }
       }
     }
@@ -43,42 +41,40 @@
 
   .social-links {
     display: flex;
-    gap: $spacing-md;
+    gap: variables.$spacing-md;
 
     .social-icon {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: $icon-size-sm;
-      height: $icon-size-sm;
-      background-color: $white-transparent-10;
-      border-radius: $border-radius-full;
-      color: $text-white;
+      width: variables.$icon-size-sm;
+      height: variables.$icon-size-sm;
+      background-color: variables.$white-transparent-10;
+      border-radius: variables.$border-radius-full;
+      color: variables.$text-white;
       text-decoration: none;
-      transition: all $transition-base;
-      font-size: $font-size-2xl;
+      font-size: variables.$font-size-2xl;
 
       &:hover {
         background-color: var(--accent-color);
-        transform: $hover-transform-up-sm;
-        box-shadow: 0 4px 8px $black-transparent-20;
+        box-shadow: 0 4px 8px variables.$black-transparent-20;
       }
     }
   }
 
   .footer-divider {
-    border-color: $white-transparent-20;
-    margin: $spacing-xl 0 $spacing-lg;
+    border-color: variables.$white-transparent-20;
+    margin: variables.$spacing-xl 0 variables.$spacing-lg;
   }
 
   .copyright {
-    color: $white-transparent-70;
-    font-size: $font-size-sm;
+    color: variables.$white-transparent-70;
+    font-size: variables.$font-size-sm;
     margin: 0;
   }
 }
 
-@media (max-width: $breakpoint-sm) {
+@media (max-width: variables.$breakpoint-sm) {
   .footer {
     text-align: center;
 

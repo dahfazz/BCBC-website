@@ -1,4 +1,4 @@
-@import '../../../variables';
+@use '../../../variables';
 
 .join-us-page {
   .hero-section {
@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, var(--primary-color) 0%, #1e40af 100%);
-    margin-top: $header-height;
+    margin-top: variables.$header-height;
 
     .hero-overlay {
       position: absolute;
@@ -22,96 +22,94 @@
 
     .hero-content {
       position: relative;
-      z-index: $z-index-base;
+      z-index: variables.$z-index-base;
       text-align: center;
-      color: $text-white;
-      padding: $spacing-2xl;
+      color: variables.$text-white;
+      padding: variables.$spacing-2xl;
 
       .hero-title {
-        font-size: $font-size-9xl;
-        font-weight: $font-weight-bold;
-        margin-bottom: $spacing-lg;
+        font-size: variables.$font-size-9xl;
+        font-weight: variables.$font-weight-bold;
+        margin-bottom: variables.$spacing-lg;
         text-shadow: 2px 2px 4px rgb(0 0 0 / 50%);
       }
 
       .hero-subtitle {
-        font-size: $font-size-4xl;
-        font-weight: $font-weight-light;
+        font-size: variables.$font-size-4xl;
+        font-weight: variables.$font-weight-light;
       }
     }
   }
 
   .container {
-    padding-bottom: $spacing-4xl;
+    padding-bottom: variables.$spacing-4xl;
 
     .intro-section {
       text-align: center;
-      padding: $spacing-4xl 0;
+      padding: variables.$spacing-4xl 0;
       max-width: 800px;
       margin: 0 auto;
 
       .section-title {
-        font-size: $font-size-7xl;
+        font-size: variables.$font-size-7xl;
         color: var(--primary-color);
-        margin-bottom: $spacing-xl;
-        font-weight: $font-weight-bold;
+        margin-bottom: variables.$spacing-xl;
+        font-weight: variables.$font-weight-bold;
       }
 
       .intro-text {
-        font-size: $font-size-xl;
-        line-height: $line-height-relaxed;
+        font-size: variables.$font-size-xl;
+        line-height: variables.$line-height-relaxed;
         color: var(--text-color);
       }
     }
 
     .advantages-section {
-      margin-bottom: $spacing-4xl;
+      margin-bottom: variables.$spacing-4xl;
 
       .advantages-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: $spacing-xl;
+        gap: variables.$spacing-xl;
 
         .advantage-card {
-          background: $bg-white;
-          padding: $spacing-2xl;
-          border-radius: $border-radius-xl;
-          box-shadow: $shadow-md;
+          background: variables.$bg-white;
+          padding: variables.$spacing-2xl;
+          border-radius: variables.$border-radius-xl;
+          box-shadow: variables.$shadow-md;
           text-align: center;
-          transition: all $transition-base;
 
           &:hover {
-            transform: $hover-transform-up-md;
-            box-shadow: $shadow-lg;
+            box-shadow: variables.$shadow-lg;
           }
 
           .advantage-icon {
-            width: $icon-size-md;
-            height: $icon-size-md;
-            margin: 0 auto $spacing-lg;
+            width: variables.$icon-size-md;
+            height: variables.$icon-size-md;
+            margin: 0 auto variables.$spacing-lg;
             background: linear-gradient(135deg, var(--primary-color), #1e40af);
-            border-radius: $border-radius-full;
+            border-radius: variables.$border-radius-full;
             display: flex;
             align-items: center;
             justify-content: center;
 
             i {
-              font-size: $font-size-6xl;
-              color: $text-white;
+              font-size: variables.$font-size-6xl;
+              color: variables.$text-white;
             }
           }
 
           .advantage-title {
-            font-size: $font-size-3xl;
+            font-size: variables.$font-size-3xl;
             color: var(--primary-color);
-            margin-bottom: $spacing-md;
-            font-weight: $font-weight-bold;
+            margin-bottom: variables.$spacing-md;
+            font-weight: variables.$font-weight-bold;
           }
 
           .advantage-description {
-            color: $text-gray;
-            line-height: $line-height-relaxed;
-            font-size: $font-size-lg;
+            color: variables.$text-gray;
+            line-height: variables.$line-height-relaxed;
+            font-size: variables.$font-size-lg;
           }
         }
       }
@@ -120,64 +118,62 @@
     .teams-cta-section {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: $spacing-xl;
-      margin-bottom: $spacing-4xl;
+      gap: variables.$spacing-xl;
+      margin-bottom: variables.$spacing-4xl;
 
       .cta-box {
         background: linear-gradient(135deg, var(--primary-color), #1e40af);
-        padding: $spacing-2xl;
-        border-radius: $border-radius-xl;
-        box-shadow: $shadow-lg;
-        color: $text-white;
+        padding: variables.$spacing-2xl;
+        border-radius: variables.$border-radius-xl;
+        box-shadow: variables.$shadow-lg;
+        color: variables.$text-white;
         text-align: center;
 
         .cta-title {
           display: flex;
           align-items: center;
           justify-content: center;
-          gap: $spacing-md;
-          font-size: $font-size-4xl;
-          margin-bottom: $spacing-lg;
-          font-weight: $font-weight-bold;
+          gap: variables.$spacing-md;
+          font-size: variables.$font-size-4xl;
+          margin-bottom: variables.$spacing-lg;
+          font-weight: variables.$font-weight-bold;
 
           i {
-            font-size: $font-size-5xl;
+            font-size: variables.$font-size-5xl;
           }
         }
 
         .cta-text {
-          margin-bottom: $spacing-xl;
-          font-size: $font-size-lg;
+          margin-bottom: variables.$spacing-xl;
+          font-size: variables.$font-size-lg;
         }
 
         .btn {
-          background-color: $bg-white;
+          background-color: variables.$bg-white;
           color: var(--primary-color);
           border: none;
           display: inline-flex;
           align-items: center;
-          gap: $spacing-sm;
-          padding: $spacing-md $spacing-xl;
-          font-weight: $font-weight-bold;
-          transition: all $transition-base;
+          gap: variables.$spacing-sm;
+          padding: variables.$spacing-md variables.$spacing-xl;
+          font-weight: variables.$font-weight-bold;
 
           &:hover {
-            transform: $hover-transform-up-sm;
-            box-shadow: $shadow-md;
+            box-shadow: variables.$shadow-md;
           }
         }
       }
     }
 
     .steps-section {
-      margin-bottom: $spacing-4xl;
+      margin-bottom: variables.$spacing-4xl;
       text-align: center;
 
       .section-title {
-        font-size: $font-size-7xl;
+        font-size: variables.$font-size-7xl;
         color: var(--primary-color);
-        margin-bottom: $spacing-3xl;
-        font-weight: $font-weight-bold;
+        margin-bottom: variables.$spacing-3xl;
+        font-weight: variables.$font-weight-bold;
       }
 
       .steps-timeline {
@@ -187,46 +183,44 @@
         .step-card {
           display: flex;
           align-items: center;
-          gap: $spacing-xl;
-          background: $bg-white;
-          padding: $spacing-2xl;
-          border-radius: $border-radius-xl;
-          box-shadow: $shadow-md;
-          margin-bottom: $spacing-xl;
+          gap: variables.$spacing-xl;
+          background: variables.$bg-white;
+          padding: variables.$spacing-2xl;
+          border-radius: variables.$border-radius-xl;
+          box-shadow: variables.$shadow-md;
+          margin-bottom: variables.$spacing-xl;
           text-align: left;
-          transition: all $transition-base;
 
           &:hover {
-            transform: translateX(10px);
-            box-shadow: $shadow-lg;
+            box-shadow: variables.$shadow-lg;
           }
 
           .step-number {
-            width: $icon-size-md;
-            height: $icon-size-md;
+            width: variables.$icon-size-md;
+            height: variables.$icon-size-md;
             background: linear-gradient(135deg, var(--primary-color), #1e40af);
-            color: $text-white;
-            border-radius: $border-radius-full;
+            color: variables.$text-white;
+            border-radius: variables.$border-radius-full;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: $font-size-7xl;
-            font-weight: $font-weight-bold;
+            font-size: variables.$font-size-7xl;
+            font-weight: variables.$font-weight-bold;
             flex-shrink: 0;
           }
 
           .step-content {
             .step-title {
-              font-size: $font-size-4xl;
+              font-size: variables.$font-size-4xl;
               color: var(--primary-color);
-              margin-bottom: $spacing-sm;
-              font-weight: $font-weight-bold;
+              margin-bottom: variables.$spacing-sm;
+              font-weight: variables.$font-weight-bold;
             }
 
             .step-description {
-              color: $text-gray;
-              font-size: $font-size-lg;
-              line-height: $line-height-relaxed;
+              color: variables.$text-gray;
+              font-size: variables.$font-size-lg;
+              line-height: variables.$line-height-relaxed;
             }
           }
         }
@@ -234,20 +228,20 @@
     }
 
     .contact-section {
-      margin-bottom: $spacing-4xl;
+      margin-bottom: variables.$spacing-4xl;
       text-align: center;
 
       .section-title {
-        font-size: $font-size-7xl;
+        font-size: variables.$font-size-7xl;
         color: var(--primary-color);
-        margin-bottom: $spacing-lg;
-        font-weight: $font-weight-bold;
+        margin-bottom: variables.$spacing-lg;
+        font-weight: variables.$font-weight-bold;
       }
 
       .contact-intro {
-        font-size: $font-size-xl;
+        font-size: variables.$font-size-xl;
         color: var(--text-color);
-        margin-bottom: $spacing-3xl;
+        margin-bottom: variables.$spacing-3xl;
         max-width: 700px;
         margin-left: auto;
         margin-right: auto;
@@ -256,42 +250,32 @@
       .contact-methods {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: $spacing-lg;
+        gap: variables.$spacing-lg;
 
         .contact-card {
           display: flex;
           align-items: center;
-          gap: $spacing-lg;
-          background: $bg-white;
-          padding: $spacing-xl;
-          border-radius: $border-radius-lg;
-          box-shadow: $shadow-md;
-          transition: all $transition-base;
+          gap: variables.$spacing-lg;
+          background: variables.$bg-white;
+          padding: variables.$spacing-xl;
+          border-radius: variables.$border-radius-lg;
+          box-shadow: variables.$shadow-md;
           text-decoration: none;
           color: inherit;
 
-          &:hover {
-            transform: $hover-transform-up-sm;
-            box-shadow: $shadow-lg;
-
-            .contact-arrow i {
-              transform: translateX(5px);
-            }
-          }
-
           .contact-icon {
-            width: $icon-size-sm;
-            height: $icon-size-sm;
+            width: variables.$icon-size-sm;
+            height: variables.$icon-size-sm;
             background: linear-gradient(135deg, var(--primary-color), #1e40af);
-            border-radius: $border-radius-lg;
+            border-radius: variables.$border-radius-lg;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: $text-white;
+            color: variables.$text-white;
             flex-shrink: 0;
 
             i {
-              font-size: $font-size-4xl;
+              font-size: variables.$font-size-4xl;
             }
           }
 
@@ -300,26 +284,24 @@
             text-align: left;
 
             .contact-label {
-              font-size: $font-size-sm;
-              color: $text-gray;
-              font-weight: $font-weight-semibold;
-              text-transform: uppercase;
-              letter-spacing: $letter-spacing-wider;
-              margin-bottom: $spacing-xs;
+              font-size: variables.$font-size-sm;
+              color: variables.$text-gray;
+              font-weight: variables.$font-weight-semibold;
+              letter-spacing: variables.$letter-spacing-wider;
+              margin-bottom: variables.$spacing-xs;
             }
 
             .contact-value {
-              font-size: $font-size-lg;
+              font-size: variables.$font-size-lg;
               color: var(--text-color);
-              font-weight: $font-weight-bold;
+              font-weight: variables.$font-weight-bold;
             }
           }
 
           .contact-arrow {
             i {
-              font-size: $font-size-3xl;
+              font-size: variables.$font-size-3xl;
               color: var(--primary-color);
-              transition: transform $transition-base;
             }
           }
         }
@@ -329,25 +311,25 @@
     .final-cta {
       .final-cta-card {
         background: linear-gradient(135deg, var(--primary-color), #1e40af);
-        padding: $spacing-4xl $spacing-2xl;
-        border-radius: $border-radius-xl;
-        box-shadow: $shadow-xl;
+        padding: variables.$spacing-4xl variables.$spacing-2xl;
+        border-radius: variables.$border-radius-xl;
+        box-shadow: variables.$shadow-xl;
         text-align: center;
-        color: $text-white;
+        color: variables.$text-white;
 
         i {
-          font-size: $font-size-9xl;
-          margin-bottom: $spacing-lg;
+          font-size: variables.$font-size-9xl;
+          margin-bottom: variables.$spacing-lg;
         }
 
         h3 {
-          font-size: $font-size-6xl;
-          margin-bottom: $spacing-lg;
-          font-weight: $font-weight-bold;
+          font-size: variables.$font-size-6xl;
+          margin-bottom: variables.$spacing-lg;
+          font-weight: variables.$font-weight-bold;
         }
 
         p {
-          font-size: $font-size-xl;
+          font-size: variables.$font-size-xl;
           margin: 0;
         }
       }
@@ -355,16 +337,16 @@
   }
 }
 
-@media (max-width: $breakpoint-md) {
+@media (max-width: variables.$breakpoint-md) {
   .join-us-page {
     .hero-section {
       .hero-content {
         .hero-title {
-          font-size: $font-size-7xl;
+          font-size: variables.$font-size-7xl;
         }
 
         .hero-subtitle {
-          font-size: $font-size-2xl;
+          font-size: variables.$font-size-2xl;
         }
       }
     }
@@ -374,7 +356,7 @@
       .steps-section,
       .contact-section {
         .section-title {
-          font-size: $font-size-5xl;
+          font-size: variables.$font-size-5xl;
         }
       }
 

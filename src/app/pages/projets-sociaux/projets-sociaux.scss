@@ -25,15 +25,9 @@
     border-radius: $border-radius-none;
     padding: $spacing-2xl;
     box-shadow: $shadow-base;
-    transition: all $transition-base;
     display: flex;
     gap: $spacing-xl;
     align-items: flex-start;
-
-    &:hover {
-      transform: $hover-transform-up-sm;
-      box-shadow: $shadow-xl;
-    }
 
     .projet-icon {
       flex-shrink: 0;
@@ -121,12 +115,10 @@
       padding: $spacing-md 2.5rem;
       font-weight: $font-weight-bold;
       border-radius: $border-radius-lg;
-      transition: all $transition-base;
+      
 
       &:hover {
         background-color: var(--bg-light);
-        transform: $hover-transform-up-sm;
-        box-shadow: $shadow-lg;
       }
     }
   }

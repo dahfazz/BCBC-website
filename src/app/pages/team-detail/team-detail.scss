@@ -16,14 +16,8 @@
       color: var(--primary-color);
       text-decoration: none;
       font-weight: $font-weight-semibold;
-      transition: all $transition-base;
       padding: $spacing-sm $spacing-md;
       border-radius: $border-radius-md;
-
-      &:hover {
-        background-color: rgb(var(--primary-color-rgb), 0.1);
-        transform: translateX(-5px);
-      }
 
       i {
         font-size: $font-size-xl;
@@ -206,12 +200,7 @@
         align-items: center;
         justify-content: center;
         gap: $spacing-sm;
-        transition: all $transition-base;
 
-        &:hover {
-          transform: $hover-transform-up-sm;
-          box-shadow: $shadow-md;
-        }
       }
     }
   }

@@ -25,7 +25,6 @@
         border-radius: $border-radius-none;
         padding: $spacing-xl;
         box-shadow: $shadow-base;
-        transition: all $transition-base;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -33,12 +32,10 @@
         text-align: center;
 
         &:hover {
-          transform: $hover-transform-up-md;
           box-shadow: $shadow-xl;
 
           .partner-logo img {
             filter: grayscale(0%);
-            transform: $hover-scale;
           }
         }
 
@@ -58,7 +55,6 @@
             max-height: 100%;
             object-fit: contain;
             filter: grayscale(80%);
-            transition: all $transition-base;
           }
         }
 
@@ -88,18 +84,9 @@
             display: inline-flex;
             align-items: center;
             gap: $spacing-sm;
-            transition: all $transition-base;
-
-            i {
-              transition: transform $transition-base;
-            }
 
             &:hover {
               color: var(--accent-color);
-
-              i {
-                transform: translateX(5px);
-              }
             }
           }
         }
@@ -135,11 +122,9 @@
       padding: $spacing-md 2.5rem;
       font-weight: $font-weight-bold;
       border-radius: $border-radius-lg;
-      transition: all $transition-base;
 
       &:hover {
         background-color: var(--bg-light);
-        transform: $hover-transform-up-sm;
         box-shadow: $shadow-lg;
       }
     }

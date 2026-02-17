@@ -44,12 +44,11 @@
 
       .team-name {
         font-size: $font-size-9xl;
-        font-weight: $font-weight-bold;
+        font-weight: $font-weight-extrabold;
         color: var(--primary-color);
         margin-bottom: $spacing-sm;
         letter-spacing: $letter-spacing-tight;
         line-height: 4.5rem;
-        font-style: italic;
       }
 
       .team-tagline {
@@ -62,7 +61,6 @@
       .team-stats {
         display: flex;
         gap: $spacing-xl;
-        margin-bottom: $spacing-2xl;
         padding-bottom: $spacing-xl;
         border-bottom: 2px solid var(--bg-light);
 
@@ -148,11 +146,6 @@
   .highlight-card {
     text-align: center;
     padding: $spacing-xl;
-    transition: transform $transition-base;
-
-    &:hover {
-      transform: $hover-transform-up-lg;
-    }
 
     .highlight-icon {
       width: $icon-size-lg;

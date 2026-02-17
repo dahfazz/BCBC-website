@@ -1,11 +1,9 @@
 @import '../../../variables';
 
 .navbar {
-  background: var(--primary-color) url('./eagle.jpg.png') no-repeat left / 90px;
-  box-shadow: $shadow-sm;
-  padding: $spacing-md 0;
-  transition: all $transition-base;
   z-index: 1030;
+  height: 100px;
+  background: url("eagle.jpg") no-repeat 0 -600px/cover;
 
   .navbar-brand {
     font-size: 1.8rem;
@@ -13,8 +11,7 @@
     letter-spacing: $letter-spacing-widest;
 
     .brand-text {
-      color: $text-white;
-      text-shadow: 2px 2px 4px $black-transparent-20;
+      display: none;
     }
 
     &:hover .brand-text {
@@ -33,13 +30,12 @@
 
 .navbar-sub {
   position: fixed;
-  top: 88px;
+  top: 100px;
   left: 0;
   right: 0;
-  background: var(--primary-color);
+  background: #111;
   z-index: 1029;
   padding: $spacing-xs 0;
-  transition: all $transition-base;
 
   .container {
     display: flex;
@@ -62,7 +58,6 @@
     font-size: 0.8rem;
     padding: $spacing-xs $spacing-sm;
     border-radius: $border-radius-md;
-    transition: all $transition-base;
     text-decoration: none;
     position: relative;
     white-space: nowrap;
@@ -76,7 +71,6 @@
       width: 0;
       height: 2px;
       background-color: $text-white;
-      transition: width $transition-base;
     }
 
     &:hover {
