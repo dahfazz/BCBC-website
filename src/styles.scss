@@ -8,6 +8,8 @@
   --accent-color: #{variables.$accent-color};
   --text-color: #{variables.$text-color};
   --bg-light: #{variables.$bg-light};
+  --bs-border-radius: 0;
+  --bs-border-radius-lg: 0;
 }
 
 * {
@@ -24,7 +26,6 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: var(--primary-color);
   font-weight: variables.$font-weight-bold;
   margin-bottom: variables.$spacing-md;
 }

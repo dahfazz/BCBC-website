@@ -45,9 +45,9 @@ export class Home {
     return Math.round(sum / this.allGames.filter((g) => g.scoreBCBC !== undefined).length);
   }
 
-  public getNextGame(): Game | null {
+  public getNextGame(nb: number): Game[] | null {
     const now = new Date();
     const upcomingGames = this.allGames.filter((g) => new Date(g.date) > now);
-    return upcomingGames.length > 0 ? upcomingGames[0] : null;
+    return upcomingGames.length > 0 ? upcomingGames.slice(0, nb) : null;
   }
 }

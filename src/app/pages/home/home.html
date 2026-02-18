@@ -1,45 +1,28 @@
 <div class="hero-section">
   <div class="container-fluid h-100">
     <div class="row h-100">
-      <div class="col-lg-6 hero-left">
+      <div class="col-lg-6 hero-left pt-5">
+        <h1 class="team-name">BOISCO BASKET !</h1>
+        <p class="team-tagline">Le club de basket de Bois-Colombes</p>
         <div class="hero-image-container">
           <div class="hero-overlay"></div>
         </div>
       </div>
-      <div class="col-lg-6 hero-right">
-        <div class="hero-content pt-5">
-          <h1 class="team-name alt-font">BOISCO BASKET !</h1>
-          <p class="team-tagline">Le club de basket de Bois-Colombes</p>
+      <div class="col-lg-6 p-4 home-content">
+        <div class="next-game p-4 mb-4 d-block">
+          @let nextGames = getNextGame(5);
 
-          <div class="team-stats">
-            <div class="stat-item">
-              <h3 class="alt-font">{{ getBilan() }}</h3>
-              <p>Bilan Saison</p>
-            </div>
-            <div class="stat-item">
-              <h3 class="alt-font">{{ getAverage() }}</h3>
-              <p>Moyenne Pts POUR</p>
-            </div>
-            <div class="stat-item">
-              <h3 class="alt-font">{{ getAverage(false) }}</h3>
-              <p>Moyenne Pts CONTRE</p>
-            </div>
-          </div>
+          <h4 class="p-0 m-0 mb-4">Prochains Matchs</h4>
 
-          <div class="cta-buttons">
-            <a routerLink="/schedule" class="btn btn-primary btn-lg">Voir le Calendrier</a>
-            <a routerLink="/players" class="btn btn-outline-primary btn-lg">Découvrir l'Équipe</a>
-          </div>
-
-          <div class="next-game">
-            @let nextGame = getNextGame();
-
-            <h4>Prochain Match</h4>
-            <div class="game-info">
-              <p class="game-date">{{ nextGame?.date }}</p>
-              <p class="game-opponent">vs {{ nextGame?.opponent }}</p>
+          @for (nextGame of nextGames; track nextGame) {
+            <div class="game-info mb-3">
+              <p class="game-opponent my-0">vs {{ nextGame?.opponent }}</p>
+              <p class="game-date my-0">{{ nextGame?.date }}</p>
             </div>
-          </div>
+          }
+          <a class="text-primary d-block mt-5" routerLink="/schedule" routerLinkActive="active"
+            >Calendrier complet...</a
+          >
         </div>
       </div>
     </div>

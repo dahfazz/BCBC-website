@@ -29,10 +29,6 @@
 }
 
 .navbar-sub {
-  position: fixed;
-  top: 100px;
-  left: 0;
-  right: 0;
   background: #111;
   z-index: 1029;
   padding: $spacing-xs 0;
@@ -83,9 +79,10 @@
     }
 
     &.active {
-      color: var(--primary-color);
-      background-color: var(--accent-color);
-      font-weight: $font-weight-semibold;
+      // color: var(--primary-color);
+      // background-color: var(--accent-color);
+      // font-weight: $font-weight-semibold;
+      border: 1px solid white;
     }
   }
 

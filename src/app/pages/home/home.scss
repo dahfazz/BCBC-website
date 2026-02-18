@@ -32,111 +32,71 @@
     }
   }
 
+  .team-name {
+    margin-top: 3rem;
+    font-size: 6rem;
+    font-weight: $font-weight-extrabold;
+    color: #fff;
+    margin-bottom: $spacing-sm;
+    letter-spacing: $letter-spacing-tight;
+    line-height: 4.5rem;
+  }
+
+  .team-tagline {
+    font-size: $font-size-5xl;
+    color: #eee;
+    margin-left: 0.5rem;
+    font-weight: $font-weight-light;
+  }
+
+  .team-stats {
+    display: flex;
+    gap: $spacing-xl;
+
+    .stat-item {
+      flex: 1;
+
+      h3 {
+        font-size: 2rem;
+        color: var(--primary-color);
+        font-weight: $font-weight-bold;
+      }
+
+      p {
+        font-size: .9rem;
+        color: var(--text-color);
+      }
+    }
+  }
+
+  .next-game {
+    background-color: #eee;
+
+    .game-info {
+      .game-date {
+          color: var(--text-color);
+          font-size: .9rem;
+        }
+
+        .game-opponent {
+          font-weight: $font-weight-semibold;
+        }
+    }
+  }
+
   .hero-right {
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding: $spacing-2xl;
     background-color: $bg-white;
 
     .hero-content {
       max-width: $hero-content-max-width;
-
-      .team-name {
-        font-size: $font-size-9xl;
-        font-weight: $font-weight-extrabold;
-        color: var(--primary-color);
-        margin-bottom: $spacing-sm;
-        letter-spacing: $letter-spacing-tight;
-        line-height: 4.5rem;
-      }
-
-      .team-tagline {
-        font-size: $font-size-5xl;
-        color: var(--text-color);
-        margin-bottom: $spacing-2xl;
-        font-weight: $font-weight-light;
-      }
-
-      .team-stats {
-        display: flex;
-        gap: $spacing-xl;
-        padding-bottom: $spacing-xl;
-        border-bottom: 2px solid var(--bg-light);
-
-        .stat-item {
-          flex: 1;
-
-          h3 {
-            font-size: $font-size-7xl;
-            color: var(--primary-color);
-            margin-bottom: $spacing-sm;
-            font-weight: $font-weight-extrabold;
-          }
-
-          p {
-            font-size: $font-size-sm;
-            color: var(--text-color);
-            margin: 0;
-            text-transform: uppercase;
-            letter-spacing: $letter-spacing-wider;
-          }
-        }
-      }
-
-      .cta-buttons {
-        display: flex;
-        gap: $spacing-md;
-        margin-bottom: $spacing-2xl;
-        flex-wrap: wrap;
-
-        .btn {
-          padding: 0.8rem $spacing-xl;
-          font-weight: $font-weight-semibold;
-          border-radius: $border-radius-lg;
-        }
-      }
-
-      .next-game {
-        background-color: var(--bg-light);
-        padding: $spacing-lg;
-        border-radius: $border-radius-xl;
-        border-left: 4px solid var(--primary-color);
-
-        h4 {
-          font-size: $font-size-md;
-          color: var(--primary-color);
-          margin-bottom: $spacing-md;
-          text-transform: uppercase;
-          letter-spacing: $letter-spacing-wider;
-          font-weight: $font-weight-bold;
-        }
-
-        .game-info {
-          p {
-            margin: $spacing-xs 0;
-            font-size: $font-size-xl;
-
-            &.game-date {
-              font-weight: $font-weight-semibold;
-              color: var(--text-color);
-            }
-
-            &.game-opponent {
-              font-size: $font-size-4xl;
-              color: var(--primary-color);
-              font-weight: $font-weight-bold;
-            }
-
-            &.game-location {
-              color: $text-gray;
-              font-size: $font-size-md;
-            }
-          }
-        }
-      }
     }
   }
+}
+
+.home-content {
+  background-color: #00000090;
 }
 
 .highlights-section {

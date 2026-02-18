@@ -1,27 +1,10 @@
 @import '../../../variables';
 
 .schedule-page {
-  padding: $spacing-4xl 0;
   min-height: $section-min-height;
 
-  .filter-buttons {
-    display: flex;
-    gap: $spacing-md;
-    justify-content: center;
-    flex-wrap: wrap;
-
-    .btn {
-      padding: 0.6rem $spacing-lg;
-      font-weight: $font-weight-semibold;
-      border-radius: $border-radius-lg;
-    }
-  }
-
   .schedule-table {
-    background-color: $bg-white;
-    border-radius: $border-radius-none;
     overflow: hidden;
-    box-shadow: $shadow-sm;
 
     thead {
       background-color: var(--primary-color);
@@ -38,142 +21,37 @@
     }
 
     tbody {
-      tr:nth-child(2n) td {
-        background-color: #0504AA10;
-      }
-
       tr {
-        &:hover {
-          background-color: var(--bg-light);
-        }
-
-        &.upcoming-row {
-          background-color: rgb(65 105 225 / 3%);
-        }
-
         td {
-          padding: $font-size-2xl $spacing-md;
           vertical-align: middle;
           border-bottom: 1px solid $border-light;
+          font-size: $font-size-sm;
+            color: var(--text-color);
 
           &.game-date {
-            font-weight: $font-weight-medium;
-            color: var(--text-color);
             width: 180px;
-            font-size: $font-size-sm;
+            font-size: .8rem;
+            color: #333;
           }
 
           &.game-opponent {
-            font-size: $font-size-md;
             width: 250px;
 
             &.bcbc{
               color: var(--primary-color);
-              font-size: $font-size-2xl;
-              font-weight: $font-weight-bold;
+              font-weight: bold;
             }
           }
 
           &.game-score {
-            font-size: $font-size-2xl;
-            color: var(--text-color);
             width: 150px;
 
             .bcbc{
               color: var(--primary-color);
-              font-weight: $font-weight-bold;
+              font-weight: bold;
             }
           }
         }
-      }
-    }
-  }
-
-  .location-badge {
-    display: inline-block;
-    padding: 0.4rem 0.8rem;
-    border-radius: $border-radius-rounded;
-    font-size: $font-size-xs;
-    font-weight: $font-weight-semibold;
-    text-transform: uppercase;
-    letter-spacing: $letter-spacing-wide;
-
-    &.home {
-      background-color: rgb(65 105 225 / 10%);
-      color: var(--primary-color);
-    }
-
-    &.away {
-      background-color: $black-transparent-05;
-      color: $text-gray;
-    }
-  }
-
-  .status-badge {
-    display: inline-block;
-    padding: 0.4rem 0.8rem;
-    border-radius: $border-radius-rounded;
-    font-size: $font-size-xs;
-    font-weight: $font-weight-bold;
-    text-transform: uppercase;
-    letter-spacing: $letter-spacing-wide;
-
-    &.status-win {
-      background-color: $color-success-bg;
-      color: $color-success;
-    }
-
-    &.status-loss {
-      background-color: $color-danger-bg;
-      color: $color-danger;
-    }
-
-    &.status-upcoming {
-      background-color: $color-warning-bg;
-      color: $color-warning;
-    }
-  }
-
-  .game-card {
-    margin-bottom: $spacing-md;
-
-    .card {
-      border: none;
-      border-radius: $border-radius-none;
-      box-shadow: $shadow-base;
-
-      .card-body {
-        padding: $spacing-lg;
-
-        .card-title {
-          color: var(--primary-color);
-          font-weight: $font-weight-bold;
-          font-size: $font-size-2xl;
-        }
-
-        .game-date {
-          color: $text-gray;
-          font-size: $font-size-base;
-        }
-
-        .game-score {
-          font-weight: $font-weight-bold;
-          font-size: $font-size-2xl;
-          color: var(--primary-color);
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: $breakpoint-sm) {
-  .schedule-page {
-    padding: $spacing-xl 0;
-
-    .filter-buttons {
-      .btn {
-        font-size: $font-size-sm;
-        padding: $spacing-sm $spacing-md;
       }
     }
   }

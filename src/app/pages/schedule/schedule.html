@@ -1,90 +1,46 @@
 <div class="schedule-page">
   <div class="container">
-    <h1 class="text-white">Calendrier saison 2025/2026</h1>
+    <h1 class="fs-3 fw-medium text-white my-4">Calendrier saison 2025/2026</h1>
+    <table class="table schedule-table">
+      <tbody>
+        @for (game of allGames; track game.date) {
+          <tr [class.upcoming-row]="game.date === 'À venir'">
+            <td class="game-date">
+              <strong [title]="game.league">{{ game.league }}</strong
+              ><br />
+              {{ game.date }}
+            </td>
+            <td
+              class="game-opponent text-end"
+              [ngClass]="{ bcbc: game.location === GameLocation.HOME }"
+            >
+              {{ game.location === GameLocation.HOME ? 'Bois-Colombes' : game.opponent }}
+            </td>
 
-    <div class="d-none d-md-block">
-      <table class="table schedule-table">
-        <tbody>
-          @for (game of allGames; track game.date) {
-            <tr [class.upcoming-row]="game.date === 'À venir'">
-              <td class="game-date">
-                <strong [title]="game.league">{{ game.league }}</strong
-                ><br />
-                {{ game.date }}
-              </td>
-              <td
-                class="game-opponent text-end"
-                [ngClass]="{ bcbc: game.location === GameLocation.HOME }"
-              >
-                {{ game.location === GameLocation.HOME ? 'BoisCo !' : game.opponent }}
-              </td>
-
-              <td class="game-score text-center">
-                @if (game.scoreBCBC && game.scoreOpponent) {
-                  @if (game.location === GameLocation.HOME) {
-                    <span class="bcbc">{{ game.scoreBCBC }}</span> - {{ game.scoreOpponent }}
-                  } @else if (game.location === GameLocation.AWAY) {
-                    {{ game.scoreOpponent }} - <span class="bcbc">{{ game.scoreBCBC }}</span>
-                  }
-                } @else {
-                  -
+            <td class="game-score text-center">
+              @if (game.scoreBCBC && game.scoreOpponent) {
+                @if (game.location === GameLocation.HOME) {
+                  <span class="bcbc">{{ game.scoreBCBC }}</span> - {{ game.scoreOpponent }}
+                } @else if (game.location === GameLocation.AWAY) {
+                  {{ game.scoreOpponent }} - <span class="bcbc">{{ game.scoreBCBC }}</span>
                 }
-              </td>
-              <td class="text-start" [ngClass]="{ bcbc: game.location === GameLocation.AWAY }">
-                {{ game.location === GameLocation.HOME ? game.opponent : 'BoisCo !' }}
-              </td>
-              <td>
-                @if (game.scoreBCBC && game.scoreOpponent) {
-                  <span class="status-badge" [ngClass]="getStatusClass(game)">{{
-                    game.scoreBCBC > game.scoreOpponent ? 'V' : 'D'
-                  }}</span>
-                }
-              </td>
-            </tr>
-          }
-        </tbody>
-      </table>
-    </div>
-
-    <div class="d-md-none">
-      @for (game of allGames; track game.date) {
-        <div class="game-card">
-          <div class="card">
-            <div class="card-body">
-              <div class="d-flex justify-content-between align-items-start mb-2">
-                <h5 class="card-title mb-0">{{ game.opponent }}</h5>
-                <span class="status-badge" [ngClass]="getStatusClass(game)">xxxxx</span>
-              </div>
-              <p class="game-date mb-2">{{ game.date }}</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <span
-                  class="location-badge"
-                  [class.home]="game.location === 'Domicile'"
-                  [class.away]="game.location === 'Extérieur'"
-                >
-                  {{ game.location }}
-                </span>
-                <td class="game-score">
-                  @if (game.scoreBCBC && game.scoreOpponent) {
-                    @if (game.location === GameLocation.HOME) {
-                      <span class="bcbc-score">{{ game.scoreBCBC }}</span> -
-                      {{ game.scoreOpponent }}
-                    } @else if (game.location === GameLocation.AWAY) {
-                      {{ game.scoreOpponent }} -
-                      <span class="bcbc-score">{{ game.scoreBCBC }}</span>
-                    }
-                    <span class="status-badge" [ngClass]="getStatusClass(game)">{{
-                      game.scoreBCBC > game.scoreOpponent ? 'V' : 'D'
-                    }}</span>
-                  } @else {
-                    -
-                  }
-                </td>
-              </div>
-            </div>
-          </div>
-        </div>
-      }
-    </div>
+              } @else {
+                -
+              }
+            </td>
+            <td class="text-start" [ngClass]="{ bcbc: game.location === GameLocation.AWAY }">
+              {{ game.location === GameLocation.HOME ? game.opponent : 'Bois-Colombes' }}
+            </td>
+            <td>
+              @if (game.scoreBCBC && game.scoreOpponent) {
+                <span class="status-badge" [ngClass]="getStatusClass(game)">{{
+                  game.scoreBCBC > game.scoreOpponent ? 'V' : 'D'
+                }}</span>
+              }
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
   </div>
 </div>

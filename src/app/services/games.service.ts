@@ -2,14 +2,14 @@ import { Injectable } from '@angular/core';
 import { Game, GameLeague, GameLocation } from '../models/game.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class GamesService {
   private mockGames: Game[] = [
     {
       league: GameLeague.FSGT,
       date: '11/5/2025',
-      opponent: 'LEVIATHAN',
+      opponent: 'Leviathan',
       location: GameLocation.AWAY,
       scoreBCBC: 63,
       scoreOpponent: 62,
@@ -33,7 +33,7 @@ export class GamesService {
     {
       league: GameLeague.FSGT,
       date: '1/27/2026',
-      opponent: 'RSC Montreuil',
+      opponent: 'RCS Montreuil',
       location: GameLocation.HOME,
       scoreBCBC: 72,
       scoreOpponent: 66,
@@ -41,7 +41,7 @@ export class GamesService {
     {
       league: GameLeague.FSGT,
       date: '1/27/2026',
-      opponent: 'PHIL France',
+      opponent: 'Phil France',
       location: GameLocation.HOME,
       scoreBCBC: 77,
       scoreOpponent: 45,
@@ -83,7 +83,7 @@ export class GamesService {
     {
       league: GameLeague.FSGT,
       date: '3/10/2026 20:30',
-      opponent: 'SAFRAN CBL',
+      opponent: 'Safran CBL',
       location: GameLocation.AWAY,
       scoreBCBC: undefined,
       scoreOpponent: undefined,
@@ -99,7 +99,7 @@ export class GamesService {
     {
       league: GameLeague.FSGT,
       date: '3/27/2026 20:00',
-      opponent: 'Bouygtel Sports',
+      opponent: 'Bouygues Sports',
       location: GameLocation.AWAY,
       scoreBCBC: undefined,
       scoreOpponent: undefined,
@@ -126,16 +126,16 @@ export class GamesService {
     {
       league: GameLeague.FFBB,
       date: '12/13/2025 13:30',
-      opponent: 'ASC BNP PARIBAS',
+      opponent: 'AS BNP Paribas',
       location: GameLocation.HOME,
       scoreBCBC: 20,
-      scoreOpponent: 0
+      scoreOpponent: 0,
     },
 
     {
       league: GameLeague.FFBB,
       date: '11/8/2025 13:30',
-      opponent: 'CSMF PARIS',
+      opponent: 'CSMF Paris',
       location: GameLocation.AWAY,
       scoreOpponent: 47,
       scoreBCBC: 88,
@@ -144,7 +144,7 @@ export class GamesService {
     {
       league: GameLeague.FFBB,
       date: '11/15/2025 13:30',
-      opponent: 'APSAP VILLE DE PARIS',
+      opponent: 'APSAP - 2',
       location: GameLocation.HOME,
       scoreBCBC: 111,
       scoreOpponent: 48,
@@ -153,7 +153,7 @@ export class GamesService {
     {
       league: GameLeague.FFBB,
       date: '12/20/2025 16:00',
-      opponent: 'AS CE FRANCE TELEVISIONS',
+      opponent: 'France Télévision',
       location: GameLocation.AWAY,
       scoreOpponent: 64,
       scoreBCBC: 79,
@@ -162,7 +162,7 @@ export class GamesService {
     {
       league: GameLeague.FFBB,
       date: '11/29/2025 14:00',
-      opponent: 'KPMG INITIATIVE SPORTS',
+      opponent: 'KPMG Sports',
       location: GameLocation.HOME,
       scoreBCBC: 102,
       scoreOpponent: 43,
@@ -171,7 +171,7 @@ export class GamesService {
     {
       league: GameLeague.FFBB,
       date: '12/6/2025 13:30',
-      opponent: 'ASSOCIATION DES SPORTS AU BARREAU DE PARIS - 2',
+      opponent: 'Barreau de Paris',
       location: GameLocation.AWAY,
       scoreOpponent: 49,
       scoreBCBC: 107,
@@ -180,7 +180,7 @@ export class GamesService {
     {
       league: GameLeague.FFBB,
       date: '1/17/2026 13:30',
-      opponent: 'ASC BNP PARIBAS - 2',
+      opponent: 'AS BNP Paribas',
       location: GameLocation.AWAY,
       scoreOpponent: 0,
       scoreBCBC: 20,
@@ -189,7 +189,7 @@ export class GamesService {
     {
       league: GameLeague.FFBB,
       date: '1/24/2026 14:00',
-      opponent: 'CSMF PARIS',
+      opponent: 'CSMF Paris',
       location: GameLocation.HOME,
       scoreBCBC: 91,
       scoreOpponent: 49,
@@ -198,7 +198,7 @@ export class GamesService {
     {
       league: GameLeague.FFBB,
       date: '1/31/2026 13:30',
-      opponent: 'APSAP VILLE DE PARIS - 2',
+      opponent: 'APSAP - 2',
       location: GameLocation.AWAY,
       scoreOpponent: 22,
       scoreBCBC: 108,
@@ -207,7 +207,7 @@ export class GamesService {
     {
       league: GameLeague.FFBB,
       date: '2/07/2026 13:30',
-      opponent: 'AS CE FRANCE TELEVISIONS',
+      opponent: 'France Télévision',
       location: GameLocation.HOME,
       scoreBCBC: 94,
       scoreOpponent: 49,
@@ -216,7 +216,7 @@ export class GamesService {
     {
       league: GameLeague.FFBB,
       date: '2/14/2026 13:30',
-      opponent: 'KPMG INITIATIVE SPORTS',
+      opponent: 'KPMG Sports',
       location: GameLocation.HOME,
       scoreOpponent: 0,
       scoreBCBC: 0,
@@ -225,10 +225,10 @@ export class GamesService {
     {
       league: GameLeague.FFBB,
       date: '3/14/2026 13:30',
-      opponent: 'ASSOCIATION DES SPORTS AU BARREAU DE PARIS - 2',
+      opponent: 'Barreau de Paris',
       location: GameLocation.HOME,
       scoreBCBC: 0,
-      scoreOpponent: 0
+      scoreOpponent: 0,
     },
   ];
 
