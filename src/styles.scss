@@ -19,9 +19,10 @@
 }
 
 body {
+  overflow-x: hidden;
   font-family: variables.$font-system;
   color: var(--text-color);
-  background: variables.$gradient-primary, var(--primary-color) url('./assets/images/team1.jpg') no-repeat center center fixed;
+  background: variables.$gradient-primary, var(--primary-color) url('./assets/images/team1.jpg') no-repeat bottom center / cover;
   line-height: variables.$line-height-base;
 }
 

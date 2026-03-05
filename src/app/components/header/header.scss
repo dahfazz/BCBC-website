@@ -2,8 +2,8 @@
 
 .navbar {
   z-index: 1030;
-  height: 100px;
-  background: url("eagle.jpg") no-repeat 0 -600px/cover;
+  height: 20vh;
+  background: url("eagle.jpg") no-repeat 0 35%/cover;
 
   .navbar-brand {
     font-size: 1.8rem;
@@ -31,7 +31,6 @@
 .navbar-sub {
   background: #111;
   z-index: 1029;
-  padding: $spacing-xs 0;
 
   .container {
     display: flex;
@@ -42,7 +41,7 @@
     display: flex;
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: .5rem 0;
     flex-wrap: wrap;
     justify-content: center;
     gap: $spacing-xs;
@@ -51,9 +50,9 @@
   .nav-link {
     color: $white-transparent-90;
     font-weight: $font-weight-medium;
-    font-size: 0.8rem;
-    padding: $spacing-xs $spacing-sm;
-    border-radius: $border-radius-md;
+    font-size: 1rem;
+    padding: $spacing-sm $spacing-md;
+    border-radius: 0;
     text-decoration: none;
     position: relative;
     white-space: nowrap;
@@ -79,10 +78,7 @@
     }
 
     &.active {
-      // color: var(--primary-color);
-      // background-color: var(--accent-color);
-      // font-weight: $font-weight-semibold;
-      border: 1px solid white;
+      background-color: #0504AA;
     }
   }
 

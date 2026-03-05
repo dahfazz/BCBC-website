@@ -1,30 +1,25 @@
-<div class="hero-section">
-  <div class="container-fluid h-100">
-    <div class="row h-100">
-      <div class="col-lg-6 hero-left pt-5">
-        <h1 class="team-name">BOISCO BASKET !</h1>
-        <p class="team-tagline">Le club de basket de Bois-Colombes</p>
-        <div class="hero-image-container">
-          <div class="hero-overlay"></div>
-        </div>
-      </div>
-      <div class="col-lg-6 p-4 home-content">
-        <div class="next-game p-4 mb-4 d-block">
-          @let nextGames = getNextGame(5);
+<div class="hero-section row">
+  <div class="col-lg-6 pt-5 d-flex justify-content-center align-items-center">
+    <div>
+      <h1 class="team-name">BOISCO<br/>BASKET !</h1>
+      <p class="team-tagline">Le club de basket de Bois-Colombes</p>
+    </div>
+  </div>
+  <div class="col-lg-6 p-4 home-content">
+    <div class="next-game p-4 mb-4 d-block">
+      @let nextGames = getNextGame(5);
 
-          <h4 class="p-0 m-0 mb-4">Prochains Matchs</h4>
+      <h4 class="p-0 m-0 mb-4">Prochains Matchs</h4>
 
-          @for (nextGame of nextGames; track nextGame) {
-            <div class="game-info mb-3">
-              <p class="game-opponent my-0">vs {{ nextGame?.opponent }}</p>
-              <p class="game-date my-0">{{ nextGame?.date }}</p>
-            </div>
-          }
-          <a class="text-primary d-block mt-5" routerLink="/schedule" routerLinkActive="active"
-            >Calendrier complet...</a
-          >
+      @for (nextGame of nextGames; track nextGame) {
+        <div class="game-info mb-3">
+          <p class="game-opponent my-0">vs {{ nextGame?.opponent }}</p>
+          <p class="game-date my-0">{{ nextGame?.date }}</p>
         </div>
-      </div>
+      }
+      <a class="text-primary d-block mt-5" routerLink="/schedule" routerLinkActive="active"
+        >Calendrier complet...</a
+      >
     </div>
   </div>
 </div>

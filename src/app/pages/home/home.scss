@@ -1,43 +1,13 @@
 @import '../../../variables';
 
 .hero-section {
-  height: calc(100vh - $header-height);
-  overflow: hidden;
+  height: 80vh;
 
-  .hero-left {
-    padding: 0;
-    height: 100%;
-    position: relative;
-
-    .hero-image-container {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-
-      .hero-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: $z-index-base;
-      }
-
-      .hero-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-  }
 
   .team-name {
-    margin-top: 3rem;
     font-size: 6rem;
     font-weight: $font-weight-extrabold;
     color: #fff;
-    margin-bottom: $spacing-sm;
     letter-spacing: $letter-spacing-tight;
     line-height: 4.5rem;
   }

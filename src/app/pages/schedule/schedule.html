@@ -3,7 +3,7 @@
     <h1 class="fs-3 fw-medium text-white my-4">Calendrier saison 2025/2026</h1>
     <table class="table schedule-table">
       <tbody>
-        @for (game of allGames; track game.date) {
+        @for (game of allGames; track game) {
           <tr [class.upcoming-row]="game.date === 'À venir'">
             <td class="game-date">
               <strong [title]="game.league">{{ game.league }}</strong
